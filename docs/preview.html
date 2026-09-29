@@ -1,0 +1,492 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>ModMoney UI preview</title>
+<style>
+  html,body{margin:0;padding:0;background:#050609;color:#E6E9EF;font-family:'Roboto','Segoe UI',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:28px 20px 60px}
+  .head{text-align:center;margin-bottom:20px}
+  .head h1{margin:0 0 4px 0;font-size:22px;font-weight:600;color:#FFB74D;letter-spacing:.3px}
+  .head p{margin:0;color:#AEB6C4;font-size:13px}
+  .cols{display:grid;grid-template-columns:340px 1fr 1fr;gap:16px;align-items:start}
+  @media (max-width:1000px){.cols{grid-template-columns:1fr}}
+  .phone{background:#0F1115;border-radius:22px;padding:16px;border:1px solid #1c212a;min-height:200px}
+  .phone .topbar{padding:6px 4px 14px 4px;border-bottom:1px solid #1c212a}
+  .phone .tabbar{display:flex;gap:20px;padding:10px 4px;border-bottom:1px solid #1c212a;margin-bottom:14px}
+  .phone .tab{color:#AEB6C4;font-size:12px;font-weight:500;padding-bottom:6px}
+  .phone .tab.active{color:#FFB74D;border-bottom:2px solid #FFB74D}
+  .colhead{color:#AEB6C4;font-size:11px;letter-spacing:.8px;margin:0 0 10px 4px;text-transform:uppercase}
+  .card{background:#1C212A;border-radius:14px;padding:14px;margin-bottom:12px}
+  .card.lo{background:#161A21}
+  .modcard{background:#1C212A;border-radius:12px;margin-bottom:10px;overflow:hidden}
+  .modrow{display:flex;align-items:center;padding:12px 8px 12px 12px;gap:8px}
+  .modname{color:#E6E9EF;font-weight:600;font-size:13px;line-height:1.25}
+  .modstrip{padding:0 12px 10px 12px;font-size:11px;font-weight:500}
+  .warn-list{padding:0 12px 12px 12px;display:flex;flex-direction:column;gap:6px}
+  .warncard{border-radius:8px;padding:8px 10px;line-height:1.35}
+  .label{color:#AEB6C4;font-size:10px;letter-spacing:.9px}
+  .mute{color:#AEB6C4}
+  .row{display:flex;align-items:center}
+  .row-between{display:flex;justify-content:space-between;align-items:center;font-size:12px}
+  .hero-row{display:flex;align-items:flex-end;gap:6px;margin-top:4px}
+  .hero-amt{font-size:26px;font-weight:600;color:#E6E9EF;line-height:1}
+  .hero-amt.over{color:#EF5350}
+  .hero-sub{color:#AEB6C4;font-size:11px;padding-bottom:3px}
+  .bar-wrap{margin-top:12px}
+  .bar-legend{display:flex;justify-content:space-between;font-size:10px;margin-top:6px}
+  .track{width:100%;background:#2A313E;border-radius:50px;position:relative;overflow:hidden}
+  .fill,.ghost{position:absolute;left:0;top:0;height:100%;border-radius:50px}
+  .fill{}
+  .ghost{}
+  hr{border:none;border-top:1px solid #2A303B;margin:14px 0}
+  .stat-row{display:flex;gap:12px}
+  .stat{flex:1}
+  .stat-val{font-size:16px;font-weight:600;margin-top:2px}
+  .warnrow{margin-top:12px;display:flex;gap:8px;color:#AEB6C4;font-size:11px;line-height:1.4;background:#EF535015;padding:10px;border-radius:8px;border:1px solid #EF535038}
+  .chip{display:inline-block;padding:2px 8px;border-radius:50px;font-size:10px;font-weight:500;margin-right:5px;line-height:1.4}
+  .chip-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+  .cat{margin-bottom:12px}
+  .cat:last-child{margin-bottom:0}
+  .dot{display:inline-block;width:5px;height:5px;border-radius:50%;margin:0 8px 2px 2px}
+  .rollup-item{color:#AEB6C4;font-size:11px;line-height:1.35;padding:2px 0}
+</style></head><body>
+<div class="wrap">
+  <div class="head">
+    <h1>ModMoney · rendered from the seeded Honda City build</h1>
+    <p>Every figure and every warning below is the actual output of the shipping app's Room seed and rule engine. This is a static preview, not a substitute for running the APK.</p>
+  </div>
+  <div class="cols">
+    <div>
+      <div class="colhead">Garage</div>
+      <div class="phone">
+        <div class="topbar" style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="color:#E6E9EF;font-weight:600;font-size:15px">ModMoney</div>
+            <div class="mute" style="font-size:10px">Garage</div>
+          </div>
+          <div class="mute" style="font-size:14px">☀</div>
+        </div>
+        <div style="height:12px"></div>
+        
+<div class="modcard">
+  <div style="padding:16px">
+    <div class="row-between">
+      <div>
+        <div style="color:#E6E9EF;font-weight:600;font-size:15px">Daily City</div>
+        <div class="mute" style="font-size:11px;margin-top:2px">2020 · Honda City VX CVT</div>
+      </div>
+      <div class="mute" style="font-size:16px">✎</div>
+    </div>
+    <div style="height:12px"></div>
+    <div class="row-between" style="align-items:flex-end">
+      <div><span class="hero-amt" style="font-size:22px">118,500</span><span class="mute" style="font-size:11px;margin-left:6px">of 180,000</span></div>
+      <div style="color:#FFB74D;font-weight:600;font-size:13px">66%</div>
+    </div>
+    <div style="height:8px"></div>
+    <div class="track" style="height:10px"><div class="ghost" style="width:100.0%;background:#FFB74D47"></div><div class="fill" style="width:65.8%;background:#FFB74D"></div></div>
+    <div class="chip-row" style="margin-top:10px">
+      <span class="chip" style="color:#64B5F6;border:1px solid #64B5F666;background:#64B5F622">11 mods</span>
+      <span class="chip" style="color:#EF5350;border:1px solid #EF535066;background:#EF535022">Projected 204k</span>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div>
+      <div class="colhead">Car home · Dashboard tab</div>
+      <div class="phone">
+        <div class="topbar" style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="color:#E6E9EF;font-weight:600;font-size:15px">← Daily City</div>
+            <div class="mute" style="font-size:10px">2020 · Honda City VX CVT</div>
+          </div>
+          <div class="mute">✎</div>
+        </div>
+        <div class="tabbar"><div class="tab active">Dashboard</div><div class="tab">Mods (11)</div></div>
+        
+<div class="card">
+  <div class="label">TOTAL SPENT</div>
+  <div class="hero-row">
+    <div class="hero-amt ">118,500</div>
+    <div class="hero-sub">of 180,000 cap</div>
+  </div>
+  <div class="bar-wrap"><div class="track" style="height:12px"><div class="ghost" style="width:100.0%;background:#FFB74D47"></div><div class="fill" style="width:65.8%;background:#FFB74D"></div></div></div>
+  <div class="bar-legend">
+    <span style="color:#FFB74D;font-weight:600">66% of budget used</span>
+    <span class="mute">faded bar = projected</span>
+  </div>
+  <hr>
+  <div class="stat-row">
+    <div class="stat">
+      <div class="label">REMAINING</div>
+      <div class="stat-val" style="color:#80CBC4">61,500</div>
+    </div>
+    <div class="stat">
+      <div class="label">PROJECTED TOTAL</div>
+      <div class="stat-val" style="color:#EF5350">203,500</div>
+    </div>
+  </div>
+  <div class="warnrow">
+    <span style="color:#EF5350;font-size:15px">⚠</span>
+    <span>You are under the cap now, but finishing every planned mod would put you 23,500 over. Something has to give — trim scope, raise the cap, or drop a low-priority item.</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="label">BUILD PROGRESS</div>
+  <div class="stat-row" style="margin-top:12px">
+    <div class="stat"><div class="label">Planned</div><div class="stat-val">5</div></div><div class="stat"><div class="label">Bought</div><div class="stat-val">2</div></div><div class="stat"><div class="label">Installed</div><div class="stat-val">4</div></div>
+  </div>
+  <div class="chip-row">
+    <span class="chip" style="color:#AEB6C4;border:1px solid #AEB6C466;background:#AEB6C422">Planned 85.0k</span><span class="chip" style="color:#FFB74D;border:1px solid #FFB74D66;background:#FFB74D22">Bought 55.4k</span><span class="chip" style="color:#80CBC4;border:1px solid #80CBC466;background:#80CBC422">Installed 63.1k</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="row-between">
+    <div class="label">BY CATEGORY</div>
+    <div class="mute" style="font-size:11px">spent / projected</div>
+  </div>
+
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Wheels</span> <span class="mute">·  1</span></div>
+        <div><span style="color:#FFB74D">46,500</span><span class="mute"> / 46,500</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:100.0%;background:#FFB74D47"></div><div class="fill" style="width:100.0%;background:#FFB74D"></div></div>
+      <div class="mute" style="font-size:11px;margin-top:4px">39% of money spent so far</div>
+    </div>
+    
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Tires</span> <span class="mute">·  1</span></div>
+        <div><span style="color:#FFB74D">33,200</span><span class="mute"> / 33,200</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:71.4%;background:#FFB74D47"></div><div class="fill" style="width:71.4%;background:#FFB74D"></div></div>
+      <div class="mute" style="font-size:11px;margin-top:4px">28% of money spent so far</div>
+    </div>
+    
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Audio</span> <span class="mute">·  1</span></div>
+        <div><span style="color:#FFB74D">15,900</span><span class="mute"> / 15,900</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:34.2%;background:#FFB74D47"></div><div class="fill" style="width:34.2%;background:#FFB74D"></div></div>
+      <div class="mute" style="font-size:11px;margin-top:4px">13% of money spent so far</div>
+    </div>
+    
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Engine</span> <span class="mute">·  1</span></div>
+        <div><span style="color:#FFB74D">8,900</span><span class="mute"> / 8,900</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:19.1%;background:#FFB74D47"></div><div class="fill" style="width:19.1%;background:#FFB74D"></div></div>
+      <div class="mute" style="font-size:11px;margin-top:4px">8% of money spent so far</div>
+    </div>
+    
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Lighting</span> <span class="mute">·  1</span></div>
+        <div><span style="color:#FFB74D">7,800</span><span class="mute"> / 7,800</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:16.8%;background:#FFB74D47"></div><div class="fill" style="width:16.8%;background:#FFB74D"></div></div>
+      <div class="mute" style="font-size:11px;margin-top:4px">7% of money spent so far</div>
+    </div>
+    
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Suspension</span> <span class="mute">·  2</span></div>
+        <div><span style="color:#FFB74D">6,200</span><span class="mute"> / 24,200</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:52.0%;background:#FFB74D47"></div><div class="fill" style="width:13.3%;background:#FFB74D"></div></div>
+      <div class="mute" style="font-size:11px;margin-top:4px">5% of money spent so far</div>
+    </div>
+    
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Exhaust</span> <span class="mute">·  1</span></div>
+        <div><span style="color:#AEB6C4">0</span><span class="mute"> / 24,000</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:51.6%;background:#FFB74D47"></div><div class="fill" style="width:0.0%;background:#FFB74D"></div></div>
+      
+    </div>
+    
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Brakes</span> <span class="mute">·  1</span></div>
+        <div><span style="color:#AEB6C4">0</span><span class="mute"> / 21,000</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:45.2%;background:#FFB74D47"></div><div class="fill" style="width:0.0%;background:#FFB74D"></div></div>
+      
+    </div>
+    
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Exterior</span> <span class="mute">·  1</span></div>
+        <div><span style="color:#AEB6C4">0</span><span class="mute"> / 14,000</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:30.1%;background:#FFB74D47"></div><div class="fill" style="width:0.0%;background:#FFB74D"></div></div>
+      
+    </div>
+    
+    <div class="cat">
+      <div class="row-between">
+        <div><span style="color:#E6E9EF">Interior</span> <span class="mute">·  1</span></div>
+        <div><span style="color:#AEB6C4">0</span><span class="mute"> / 8,000</span></div>
+      </div>
+      <div style="height:6px"></div>
+      <div class="track" style="height:7px"><div class="ghost" style="width:17.2%;background:#FFB74D47"></div><div class="fill" style="width:0.0%;background:#FFB74D"></div></div>
+      
+    </div>
+    </div>
+    <div class="card">
+      <div class="row"><span style="color:#FFB74D;margin-right:8px">⚠</span><span class="label">THINGS TO CHECK</span></div>
+      <div style="height:10px"></div>
+    <div style="margin-bottom:10px"><div style="color:#E6E9EF;font-weight:500;font-size:13px">17x7.5 ET42 flow-formed alloys</div><div class="rollup-item"><span class="dot" style="background:#FFB74D"></span>+1&quot; over stock wheel diameter (16&quot; → 17&quot;)</div></div><div style="margin-bottom:10px"><div style="color:#E6E9EF;font-weight:500;font-size:13px">Lowering springs (-35 mm)</div><div class="rollup-item"><span class="dot" style="background:#FFB74D"></span>Lowering 35 mm on 17&quot; wheels — check guard clearance</div></div><div class="mute" style="font-size:11px">Open a mod on the Mods tab for the full explanation.</div></div>
+    <div class="card lo">
+      <div class="label">BUILD NOTES</div>
+      <div style="height:6px"></div>
+      <div style="color:#E6E9EF;font-size:13px;line-height:1.45">5th gen (GN2). Stock 16&quot; alloys with 185/55 R16. Keeping it street-friendly — no rubbing, no warning lights.</div>
+    </div>
+      </div>
+    </div>
+    <div>
+      <div class="colhead">Car home · Mods tab</div>
+      <div class="phone">
+        <div class="topbar" style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="color:#E6E9EF;font-weight:600;font-size:15px">← Daily City</div>
+            <div class="mute" style="font-size:10px">2020 · Honda City VX CVT</div>
+          </div>
+          <div class="mute">✎</div>
+        </div>
+        <div class="tabbar"><div class="tab">Dashboard</div><div class="tab active">Mods (11)</div></div>
+        
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">Drilled front rotors + performance pads</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Brakes</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#9AA4B2;border:1px solid #9AA4B266;background:#9AA4B222">Planned</span>
+            <span class="chip" style="color:#EF5350;border:1px solid #EF535066;background:#EF535022">High priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#AEB6C4;font-weight:600">21,000</div>
+          <div class="mute" style="font-size:11px">estimate</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="modstrip" style="color:#64B5F6"><span style="margin-right:6px">ⓘ</span>1 compatibility note</div><div class="warn-list">
+            <div class="warncard" style="border:1px solid #64B5F659;background:#64B5F61a">
+              <div style="color:#64B5F6;font-weight:600;font-size:12px"><span style="margin-right:5px">ⓘ</span>Confirm caliper clearance inside 16&quot; wheels</div>
+              <div class="mute" style="font-size:11px;margin-top:3px">Larger rotors and thicker calipers do not always fit behind small rims. Check the caliper-to-spoke clearance for the smallest wheel you plan to run (16&quot;), including any winter or spare set.</div>
+            </div></div><div class="mute" style="font-size:11px;padding:0 12px 12px 12px">262 mm front. Confirm pad compound is OK cold — daily driver.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">17x7.5 ET42 flow-formed alloys</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Wheels</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#FFB74D;border:1px solid #FFB74D66;background:#FFB74D22">Bought</span>
+            <span class="chip" style="color:#EF5350;border:1px solid #EF535066;background:#EF535022">High priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#FFB74D;font-weight:600">46,500</div>
+          <div style="color:#80CBC4;font-size:11px">-1,500 vs est.</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="modstrip" style="color:#FFB74D"><span style="margin-right:6px">⚠</span>1 compatibility note</div><div class="warn-list">
+            <div class="warncard" style="border:1px solid #FFB74D59;background:#FFB74D1a">
+              <div style="color:#FFB74D;font-weight:600;font-size:12px"><span style="margin-right:5px">⚠</span>+1&quot; over stock wheel diameter (16&quot; → 17&quot;)</div>
+              <div class="mute" style="font-size:11px;margin-top:3px">Going up in rim size without dropping tire profile raises the overall rolling diameter, which makes the speedometer read low (you will actually be travelling faster than indicated) and adds error to the odometer. To stay near stock rolling diameter on a 17&quot; rim, aim for roughly a 50-series tire (about 185/50 R17). Also budget for the ride-quality loss from the shorter sidewall, and re-check clearance at full steering lock.</div>
+            </div></div><div class="mute" style="font-size:11px;padding:0 12px 12px 12px">5x114.3, 64.1 hub. Went one inch up from stock. Need to confirm no strut clearance issue at full lock.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">205/45 R17 Michelin Pilot Sport 4</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Tires</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#66BB6A;border:1px solid #66BB6A66;background:#66BB6A22">Installed</span>
+            <span class="chip" style="color:#EF5350;border:1px solid #EF535066;background:#EF535022">High priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#FFB74D;font-weight:600">33,200</div>
+          <div style="color:#EF5350;font-size:11px">+1,200 vs est.</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="modstrip" style="color:#64B5F6"><span style="margin-right:6px">ⓘ</span>3 compatibility notes</div><div class="warn-list">
+            <div class="warncard" style="border:1px solid #64B5F659;background:#64B5F61a">
+              <div style="color:#64B5F6;font-weight:600;font-size:12px"><span style="margin-right:5px">ⓘ</span>Rolling diameter within 1.0% of stock — good match</div>
+              <div class="mute" style="font-size:11px;margin-top:3px">New setup: 205/45 R17. Overall diameter changes by 6.4 mm (1.0%) versus the stock 185/55 R16. That is inside the ±3% window most people treat as stock-equivalent, so speedometer error stays negligible. Tire profile note: sidewall height is now about 92 mm.</div>
+            </div>
+            <div class="warncard" style="border:1px solid #64B5F659;background:#64B5F61a">
+              <div style="color:#64B5F6;font-weight:600;font-size:12px"><span style="margin-right:5px">ⓘ</span>45-series tire is low profile</div>
+              <div class="mute" style="font-size:11px;margin-top:3px">A 45 aspect ratio leaves a short sidewall, so the tire absorbs less of the road. Keep pressures to spec — under-inflation on a low-profile tire concentrates damage on the rim lip.</div>
+            </div>
+            <div class="warncard" style="border:1px solid #64B5F659;background:#64B5F61a">
+              <div style="color:#64B5F6;font-weight:600;font-size:12px"><span style="margin-right:5px">ⓘ</span>Tire is 20 mm wider than stock (185 → 205 mm)</div>
+              <div class="mute" style="font-size:11px;margin-top:3px">Wider rubber adds grip but also adds tramlining, a little more steering effort, and a small fuel-economy penalty. Make sure the rim width suits a 205 mm section, and re-check inner-guard clearance at full lock.</div>
+            </div></div><div class="mute" style="font-size:11px;padding:0 12px 12px 12px">Sized to keep rolling diameter near stock so the speedo stays honest.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">Lowering springs (-35 mm)</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Suspension</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#9AA4B2;border:1px solid #9AA4B266;background:#9AA4B222">Planned</span>
+            <span class="chip" style="color:#FFB74D;border:1px solid #FFB74D66;background:#FFB74D22">Medium priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#AEB6C4;font-weight:600">18,000</div>
+          <div class="mute" style="font-size:11px">estimate</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="modstrip" style="color:#FFB74D"><span style="margin-right:6px">⚠</span>2 compatibility notes</div><div class="warn-list">
+            <div class="warncard" style="border:1px solid #FFB74D59;background:#FFB74D1a">
+              <div style="color:#FFB74D;font-weight:600;font-size:12px"><span style="margin-right:5px">⚠</span>Lowering 35 mm on 17&quot; wheels — check guard clearance</div>
+              <div class="mute" style="font-size:11px;margin-top:3px">You have &quot;17x7.5 ET42 flow-formed alloys&quot; in this build at 17&quot; (stock is 16&quot;), and this entry lowers the car 35 mm. The combination shrinks the gap between tire and guard from both directions at once, so rubbing on full compression is the most likely problem. Roll the guards or verify clearance with the car fully loaded before signing off on either part.</div>
+            </div>
+            <div class="warncard" style="border:1px solid #64B5F659;background:#64B5F61a">
+              <div style="color:#64B5F6;font-weight:600;font-size:12px"><span style="margin-right:5px">ⓘ</span>Lowered 35 mm</div>
+              <div class="mute" style="font-size:11px;margin-top:3px">Dropping 35 mm reduces suspension travel and steepens camber, which wears the inner shoulder of the tires faster. Get an alignment afterwards. Headlight aim also drops — re-aim after fitting.</div>
+            </div></div><div class="mute" style="font-size:11px;padding:0 12px 12px 12px">Want the gap gone, but not scraping every speed bump.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">Cat-back exhaust, 2.25&quot;</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Exhaust</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#9AA4B2;border:1px solid #9AA4B266;background:#9AA4B222">Planned</span>
+            <span class="chip" style="color:#FFB74D;border:1px solid #FFB74D66;background:#FFB74D22">Medium priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#AEB6C4;font-weight:600">24,000</div>
+          <div class="mute" style="font-size:11px">estimate</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="mute" style="font-size:11px;padding:0 12px 12px 12px">Must stay quiet enough to pass the annual check.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">Cold air intake</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Engine</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#FFB74D;border:1px solid #FFB74D66;background:#FFB74D22">Bought</span>
+            <span class="chip" style="color:#FFB74D;border:1px solid #FFB74D66;background:#FFB74D22">Medium priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#FFB74D;font-weight:600">8,900</div>
+          <div style="color:#80CBC4;font-size:11px">-600 vs est.</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="mute" style="font-size:11px;padding:0 12px 12px 12px">Heat shield included; watch for a lean CEL after fitting.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">9&quot; Android head unit</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Audio</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#66BB6A;border:1px solid #66BB6A66;background:#66BB6A22">Installed</span>
+            <span class="chip" style="color:#FFB74D;border:1px solid #FFB74D66;background:#FFB74D22">Medium priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#FFB74D;font-weight:600">15,900</div>
+          <div style="color:#80CBC4;font-size:11px">-600 vs est.</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="mute" style="font-size:11px;padding:0 12px 12px 12px">Retained steering-wheel controls via canbox.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">Front lip + side skirts</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Exterior</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#9AA4B2;border:1px solid #9AA4B266;background:#9AA4B222">Planned</span>
+            <span class="chip" style="color:#78909C;border:1px solid #78909C66;background:#78909C22">Low priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#AEB6C4;font-weight:600">14,000</div>
+          <div class="mute" style="font-size:11px">estimate</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="mute" style="font-size:11px;padding:0 12px 12px 12px">PU, not ABS — needs to survive driveway ramps.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">Door + boot sound deadening</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Interior</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#9AA4B2;border:1px solid #9AA4B266;background:#9AA4B222">Planned</span>
+            <span class="chip" style="color:#78909C;border:1px solid #78909C66;background:#78909C22">Low priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#AEB6C4;font-weight:600">8,000</div>
+          <div class="mute" style="font-size:11px">estimate</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="mute" style="font-size:11px;padding:0 12px 12px 12px">Butyl sheets, 4 doors.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">Front strut brace</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Suspension</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#66BB6A;border:1px solid #66BB6A66;background:#66BB6A22">Installed</span>
+            <span class="chip" style="color:#78909C;border:1px solid #78909C66;background:#78909C22">Low priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#FFB74D;font-weight:600">6,200</div>
+          <div style="color:#80CBC4;font-size:11px">-300 vs est.</div>
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="mute" style="font-size:11px;padding:0 12px 12px 12px">Clears the engine cover fine.</div></div>
+    <div class="modcard">
+      <div class="modrow">
+        <div style="flex:1;min-width:0">
+          <div class="modname">LED headlight conversion</div>
+          <div class="mute" style="font-size:11px;margin-top:2px">Lighting</div>
+          <div class="chip-row">
+            <span class="chip" style="color:#66BB6A;border:1px solid #66BB6A66;background:#66BB6A22">Installed</span>
+            <span class="chip" style="color:#78909C;border:1px solid #78909C66;background:#78909C22">Low priority</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#FFB74D;font-weight:600">7,800</div>
+          
+        </div>
+        <div style="color:#39414F;margin-left:6px">›</div>
+      </div>
+    <div class="mute" style="font-size:11px;padding:0 12px 12px 12px">Projector housing, so no scatter. CANbus decoder fitted.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>
